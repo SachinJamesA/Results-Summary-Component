@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap');
+
+:root {
+    /* Primary Colors */
+
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradient Colors */
+
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral colos */
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.container {
+    background-color: var(--White);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    background-color: var(--Pale-blue);
+    height: 56vh;
+    width: 45%;
+    margin: auto;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    box-shadow: 1px 0px 20px 2px rgb(0, 0, 0.4);
+}
+
+.left {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    height: 100%;
+    width: 50%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.left h3 {
+    font-size: 22px;
+    margin-top: 2vw;
+    color: white;
+}
+
+.left .circle {
+    background: linear-gradient(var(--Violet-blue-circle) 10%, var(--Persian-blue-circle) 90%);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 82px;
+    text-align: center;
+    box-shadow: inset 1px 1px 12px 0px hsla(256, 72%, 46%, 1);
+}
+
+.left .circle .text {
+    position: relative;
+    top: 20px;
+    color: white;
+}
+
+.left .circle .text h2 {
+    font-size: 4rem;
+}
+
+.left h1 {
+    position: absolute;
+    top: 245px;
+    color: white;
+}
+
+.left p{
+    font-size: 15px;
+    position: absolute;
+    top: 290px;
+    color: var(--Pale-blue);
+    text-align: center;
+}
+
+.right {
+    width: 50%;
+    padding: 30px;
+}
+
+.right h4 {
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+
+.score-con {
+    display: flex;
+}
+
+.score-con img {
+    margin-right: 5px;
+}
+
+.score-reaction {
+    background-color: hsla(0, 100%, 67%, 0.3);
+    display: flex;
+    justify-content: space-between;
+    color: hsl(0, 100%, 67%);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.grey {
+    color: rgba(87, 87, 87, 0.992);
+}
+
+.black-text {
+    color: black;
+    font-weight: bold;
+}
+
+.score-memory {
+    background-color: hsla(39, 100%, 56%, 0.3);
+    display: flex;
+    justify-content: space-between;
+    color: var(--Orangey-yellow);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.score-verbal{
+    background-color: hsla(166, 100%, 37%, 0.3);
+    display: flex;
+    justify-content: space-between;
+    color: var(--Green-teal);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.score-visual {
+    background-color: hsla(234, 85%, 45%, 0.3);
+    display: flex;
+    justify-content: space-between;
+    color: var(--Cobalt-blue);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    color: white;
+    outline: none;
+    background-color: hsl(224, 30%, 27%);
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media (max-width:920px) {
+    .content {
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0;
+        overflow: hidden;
+        padding: 0;
+    }
+    .left{
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .right{
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .right h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    .text {
+        padding: 22px;
+        text-align: center;
+    }
+    .btn {
+        margin-top: 12px;
+        margin-bottom: 5px;
+    }
+
+    .left .circle {
+        background: linear-gradient(var(--Violet-blue-circle) 10%, var(--Persian-blue-circle) 90%);
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        position: absolute;
+        top: 45px;
+        text-align: center;
+        box-shadow: inset 1px 1px 12px 0px hsla(256, 72%, 46%, 1);
+    }
+    
+    .left .circle .text {
+        position: relative;
+        top: 6px;
+        color: white;
+    }
+    .left h1 {
+        position: absolute;
+        top: 196px;
+        color: white;
+    }
+    
+    .left p{
+        font-size: 13px;
+        position: absolute;
+        top: 239px;
+        color: var(--Pale-blue);
+        text-align: center;
+    }
+}
+
